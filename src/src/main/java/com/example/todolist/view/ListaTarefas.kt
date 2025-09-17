@@ -1,6 +1,9 @@
 package com.example.todolist.view
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -15,9 +18,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.todolist.itemLista.ItemLista
+import com.example.todolist.model.Tarefa
 import com.example.todolist.ui.theme.Purple40
 
 
@@ -57,7 +63,20 @@ fun ListaTarefas(navController: NavController) {
                 )
             }
         }
-    ){}
+    ){
+        val lisaTarefa : MutableList<Tarefa> = mutableListOf(Tarefa("Segue meu peixe",
+            descricao = "Vamo",
+            2
+           )
+        )
+        LazyColumn (
+            modifier = Modifier.padding(0.dp,100.dp,0.dp,0.dp)
+        ){
+            itemsIndexed(lisaTarefa){ position,_ ->
+                ItemLista(position,lisaTarefa)
+            }
+        }
+    }
 }
 //
 //@Preview

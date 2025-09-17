@@ -40,6 +40,8 @@ import androidx.navigation.compose.rememberNavController
 import com.example.todolist.components.CaixaDeTexto
 import com.example.todolist.ui.theme.Purple40
 import com.example.todolist.ui.theme.RB_GREEN
+import com.example.todolist.ui.theme.RB_RED
+import com.example.todolist.ui.theme.RB_YELLOW
 import kotlin.reflect.typeOf
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -123,7 +125,7 @@ fun AddTarefas(navController: NavController) {
                         prioridade = "media"
                     },
                     colors = RadioButtonDefaults.colors(
-                        selectedColor = Color.Yellow
+                        selectedColor = RB_YELLOW
                     )
                 )
                 RadioButton(
@@ -132,7 +134,7 @@ fun AddTarefas(navController: NavController) {
                         prioridade = "alta"
                     },
                     colors = RadioButtonDefaults.colors(
-                        selectedColor = Color.Red
+                        selectedColor = RB_RED
                     )
                 )
             }

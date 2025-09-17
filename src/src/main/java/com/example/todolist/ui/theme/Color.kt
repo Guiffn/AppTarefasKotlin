@@ -10,3 +10,7 @@ val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 val RB_GREEN= Color(0xFF14FF10)
+val RB_RED= Color(0xFF8C0000)
+val RB_YELLOW= Color(0xFFF7FF10)
+
+val WHITE= Color(0xFFFFFFFF)
